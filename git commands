@@ -1,0 +1,14 @@
+git --version
+git init
+git status
+git add filename
+git commit -m "message"
+git rename -M main
+git remote add origin "githuburl"
+git push -u origin main
+git fetch 
+git merge
+git pull
+git checkout
+git log
+  
