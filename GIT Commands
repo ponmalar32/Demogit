@@ -1,0 +1,69 @@
+git --version
+git init
+git status
+git add filename
+git commit -m "message"
+git rename -M main
+git remote add origin "githuburl"
+git push -u origin main
+git push -u origin branchname
+git fetch <remote> <branch>
+git fetch origin branch
+git merge <branchname>
+git pull <remotename> <originname>
+git pull --all
+git fetch --all
+git checkout origin/master
+git log
+git switch -c <new branch name>
+git branch <branchname>
+git branch ==> report branches
+git switch ==> switch branches
+
+DELETE A BRANCH
+================
+a. git branch -d <branchname_todelete>
+if using the above command is not deleting the branch then use -D
+
+RENAMING BRANCH IN 2 STEPS
+===========================
+ a. git switch <branchname>
+ b. git branch -M <new_name_for_branch>  
+
+ Differences in files
+ =====================
+ git diff ==> shows difference between same file(previous version and version currently present). No need of filename here
+
+Differences in two different branches
+=====================================
+ git diff <branchname> <comparedbranchname>
+
+REVERT CHANGES
+===============
+ Git restore
+ git reset
+ git revert
+ detached HEAD
+ git checkout ==> used for files, branches, and commits.
+
+ Git CheckOUT --> command operates on files, commits, branches
+ ============
+git log ==> shows the author, date, commit ID's where most recent stays the top
+git checkout --oneline   ==> this shows the first 7 letters of the commit ID's
+==> git checkout ####### (7 commit IDS type here) ==> this will move the HEAD to the commit ID shown. 
+git checkout master ==> Will move it to the master
+
+GIT RESTORE  --> we can restore a file to the previous most recent commit
+=============
+NOTE: you cannot undo a git restore command since your changes were not commited.
+This command is like undo CTRL + Z which restores files to previous commit
+
+
+git restore file_name
+git restore --source HEAD ~N file.txt
+git restore --staged filename  ==> Once git add command is executed, all files move to staging area. 
+If you want to remove any file from staging area the we use the above command.
+
+ 
+GIT RESET
+==========
